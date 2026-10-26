@@ -4,10 +4,8 @@ import { ThemeContext } from './ThemeContext'
 import Hero_img from "../../assets/images/png/hero_img.png"
 
 const Homepage = () => {
-  // useContext for Language translation
   const { toggleLanguage, t } = useContext(LangContext)
 
-  // useContext for Dark mode toggle
   const { theme, toggleTheme } = useContext(ThemeContext)
 
   return (
@@ -47,7 +45,6 @@ const Homepage = () => {
               {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
             </button>
 
-            {/* Original Let's Talk Button */}
             <button
               className={`font-medium text-xl cursor-pointer leading-150 py-2.5 px-5.5 rounded-[5px] border ${
                 theme === 'dark' ? 'text-white border-white' : 'text-off-black border-off-black'
@@ -81,7 +78,6 @@ const Homepage = () => {
                 {t.heroCta}
               </button>
 
-              {/* Language Translate Button (useContext) */}
               <button
                 onClick={toggleLanguage}
                 className={`font-medium text-xl cursor-pointer leading-150 py-2.5 px-5.5 rounded-[5px] border ${

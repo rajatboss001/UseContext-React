@@ -1,6 +1,5 @@
 import { createContext, useState, useContext } from 'react';
 
-// Translations data for English and Hindi
 export const translations = {
   en: {
     navLinks: [
@@ -36,10 +35,8 @@ export const translations = {
   },
 };
 
-// Create LangContext
 export const LangContext = createContext();
 
-// LangProvider Component to manage language state
 export const LangProvider = ({ children }) => {
   const [lang, setLang] = useState('en');
 
@@ -56,5 +53,4 @@ export const LangProvider = ({ children }) => {
   );
 };
 
-// Custom hook helper
 export const useLang = () => useContext(LangContext);
